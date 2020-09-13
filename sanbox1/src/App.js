@@ -13,12 +13,13 @@ const App = () => {
   }, []);
 
   const getRecipes = async () => {
-    // const response = await fetch(
-    //   `https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${Key}`
-    //   );
-    //   const data = response.json();
-    //   console.log(data.hits);
-    //   setRecipes(data.hits);
+    const response = await fetch(
+      `https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${Key}`
+    );
+    const data = response.json().then((data) => {
+      console.log(data);
+      setRecipes(data.hits);
+    });
   };
 
   return (
@@ -31,9 +32,9 @@ const App = () => {
       </form>
       <div>
         <Recipe />
-        {recipes.map((recipe) => (
+        {/* {recipes.map((recipe) => (
           <Recipe />
-        ))}
+        ))} */}
       </div>
     </div>
   );
