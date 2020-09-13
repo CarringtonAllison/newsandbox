@@ -10,12 +10,13 @@ const App = () => {
   // setting variables and state
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
-  const [query, setQuery] = useState("chicken");
+  const [query, setQuery] = useState("");
 
   useEffect(() => {
     getRecipes();
   }, [query]);
 
+  // async api call
   const getRecipes = async () => {
     const response = await fetch(
       `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${Key}`
@@ -26,10 +27,12 @@ const App = () => {
     setRecipes(data.hits);
   };
 
+  //function for updating the search input box live
   const updateSearch = (e) => {
     setSearch(e.target.value);
   };
 
+  //grabs the final search input
   const getSearch = (e) => {
     //stops page refresh
     e.preventDefault();
@@ -49,6 +52,7 @@ const App = () => {
           type="text"
           value={search}
           onChange={updateSearch}
+          placeholder="Search for Food"
         />
         <button className="search-button" type="submit">
           Search
@@ -62,6 +66,9 @@ const App = () => {
             calories={recipe.recipe.calories}
             image={recipe.recipe.image}
             ingredients={recipe.recipe.ingredients}
+            cooktime={recipe.recipe.totaltime}
+            foodyield={recipe.recipe.yield}
+            foodUrl={recipe.recipe.url}
           />
         ))}
       </div>
