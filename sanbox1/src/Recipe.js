@@ -8,11 +8,13 @@ const Recipe = ({
   foodyield,
   foodUrl,
 }) => {
+  let fixedCalories = calories.toFixed(2);
+
   return (
     <div>
       <h1>{title}</h1>
-      <img src={image} alt="" />
-      <p>Calories: {calories}</p>
+      <img src={image} alt="Image of fodd" />
+      <p>Calories: {fixedCalories}</p>
       <p>Yield: {foodyield} </p>
       <ul>
         <h4>Ingredients</h4>
