@@ -1,10 +1,15 @@
-.theSearch {
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  display: block;
-  margin: auto;
-  /* line-height and height help verticaly center */
-  line-height: 50vh;
-  height: 50vh;
+/* BACKRGROUND ***best way to make a background image is to target the HTML tag */
+html {
+  background: url(./Photos/artworks-000358478883-twxd32-t500x500.jpg) no-repeat
+    center fixed;
+  background-size: cover;
+}
+
+/* Search Bar */
+#searchBar {
+  color: white;
+}
+
+.fas fa-angle-double-up {
+  color: black;
 }

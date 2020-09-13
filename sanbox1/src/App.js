@@ -46,32 +46,44 @@ const App = () => {
 
   return (
     <div className="App">
-      <form onSubmit={getSearch} className="search-form">
-        <div className="theSearch">
-          <input
-            className="search-bar"
-            type="text"
-            value={search}
-            onChange={updateSearch}
-            placeholder="Search for Food"
-          />
-          <button className="search-button" type="submit">
-            Search
-          </button>
+      <div className="row">
+        <div className="input-field col s4">
+          <form onSubmit={getSearch} className="search-form">
+            <div className="input-field">
+              <input
+                id="searchBar"
+                className="materialize-textarea"
+                type="text"
+                value={search}
+                onChange={updateSearch}
+              />
+              <label htmlFor="materialize-textarea">Search for Food</label>
+              <button
+                className="btn waves-effect waves-light"
+                type="submit"
+                name="action"
+              >
+                Submit
+                {/* <i class="material-icons right">send</i> */}
+              </button>
+            </div>
+          </form>
         </div>
-      </form>
-      <div className="recipeList">
+      </div>
+      <div className="row">
         {recipes.map((recipe) => (
-          <Recipe
-            key={recipe.recipe.image}
-            title={recipe.recipe.label}
-            calories={recipe.recipe.calories}
-            image={recipe.recipe.image}
-            ingredients={recipe.recipe.ingredients}
-            cooktime={recipe.recipe.totaltime}
-            foodyield={recipe.recipe.yield}
-            foodUrl={recipe.recipe.url}
-          />
+          <div className="card col s3">
+            <Recipe
+              key={recipe.recipe.image}
+              title={recipe.recipe.label}
+              calories={recipe.recipe.calories}
+              image={recipe.recipe.image}
+              ingredients={recipe.recipe.ingredients}
+              cooktime={recipe.recipe.totaltime}
+              foodyield={recipe.recipe.yield}
+              foodUrl={recipe.recipe.url}
+            />
+          </div>
         ))}
       </div>
     </div>
