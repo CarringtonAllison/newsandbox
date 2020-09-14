@@ -13,3 +13,22 @@ html {
 .fas fa-angle-double-up {
   color: black;
 }
+
+.card {
+  margin: 20px;
+  border-radius: 30px;
+  padding: 35px;
+}
+
+.activator {
+  /* border-radius: 70px; */
+  /* padding: 40px; */
+}
+
+.card .card-image img {
+  border-radius: 30px;
+  box-shadow: 5px 2px 10px 5px rgba(0, 0, 0, 0.3);
+  height: 40vh;
+  width: auto;
+  margin: 15px auto;
+}

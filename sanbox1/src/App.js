@@ -47,7 +47,7 @@ const App = () => {
   return (
     <div className="App">
       <div className="row">
-        <div className="input-field col s4">
+        <div className="input-field col s4 offset-4">
           <form onSubmit={getSearch} className="search-form">
             <div className="input-field">
               <input
@@ -64,7 +64,6 @@ const App = () => {
                 name="action"
               >
                 Submit
-                {/* <i class="material-icons right">send</i> */}
               </button>
             </div>
           </form>
@@ -72,7 +71,7 @@ const App = () => {
       </div>
       <div className="row">
         {recipes.map((recipe) => (
-          <div className="card col s3">
+          <div className="col l3 m6 s12">
             <Recipe
               key={recipe.recipe.image}
               title={recipe.recipe.label}
