@@ -34,7 +34,7 @@ const Recipe = ({
         <p>Yield: {foodyield} </p>
         <p>Calories: {fixedCalories}</p>
         <ul>
-          <h4>Ingredients</h4>
+          <h5>Ingredients</h5>
           {ingredients.map((data) => (
             <li>{data.text}</li>
           ))}

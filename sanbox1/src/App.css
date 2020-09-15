@@ -18,6 +18,7 @@ html {
   margin: 20px;
   border-radius: 30px;
   padding: 35px;
+  background-color: rgb(79 75 88 / 50%);
 }
 
 .activator {
@@ -27,8 +28,25 @@ html {
 
 .card .card-image img {
   border-radius: 30px;
-  box-shadow: 5px 2px 10px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 2px 10px 5px rgba(255, 255, 255, 0.5);
   height: 40vh;
   width: auto;
   margin: 15px auto;
+}
+
+.card-content {
+  color: white;
+  padding: 5px;
+}
+
+.grey-text {
+  color: white;
+}
+
+.card-reveal {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+#submitButton {
+  text-align: center;
 }

@@ -47,7 +47,7 @@ const App = () => {
   return (
     <div className="App">
       <div className="row">
-        <div className="input-field col s4 offset-4">
+        <div className="input-field col s6 offset-s3">
           <form onSubmit={getSearch} className="search-form">
             <div className="input-field">
               <input
@@ -59,6 +59,7 @@ const App = () => {
               />
               <label htmlFor="materialize-textarea">Search for Food</label>
               <button
+                id="submitButton"
                 className="btn waves-effect waves-light"
                 type="submit"
                 name="action"
