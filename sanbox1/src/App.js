@@ -58,14 +58,16 @@ const App = () => {
                 onChange={updateSearch}
               />
               <label htmlFor="materialize-textarea">Search for Food</label>
-              <button
-                id="submitButton"
-                className="btn waves-effect waves-light"
-                type="submit"
-                name="action"
-              >
-                Submit
-              </button>
+              <div className="col s4 offset-s4">
+                <button
+                  id="submitButton"
+                  className="btn waves-effect waves-light"
+                  type="submit"
+                  name="action"
+                >
+                  Submit
+                </button>
+              </div>
             </div>
           </form>
         </div>

@@ -21,8 +21,13 @@ const Recipe = ({
           <i className="material-icons right">more_vert</i>
         </span>
         <p>
-          <a href={foodUrl} targt="_blank" rel="noopener noreferrer">
-            Prepare
+          <a
+            className="prepareLink"
+            href={foodUrl}
+            targt="_blank"
+            rel="noopener noreferrer"
+          >
+            How To Prepare
           </a>
         </p>
       </div>
@@ -31,8 +36,14 @@ const Recipe = ({
           {title}
           <i className="material-icons right">close</i>
         </span>
-        <p>Yield: {foodyield} </p>
-        <p>Calories: {fixedCalories}</p>
+        <p>
+          <h5>Yield:</h5>
+          {foodyield}{" "}
+        </p>
+        <p>
+          <h5>Calories:</h5>
+          {fixedCalories}
+        </p>
         <ul>
           <h5>Ingredients</h5>
           {ingredients.map((data) => (

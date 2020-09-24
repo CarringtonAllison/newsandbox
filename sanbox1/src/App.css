@@ -44,9 +44,27 @@ html {
 }
 
 .card-reveal {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgb(139 135 131 / 0.9) !important;
 }
 
 #submitButton {
   text-align: center;
+}
+
+.grey-text.text-darken-4 {
+  color: white !important;
+  font-size: x-large;
+}
+
+.prepareLink {
+  text-decoration: underline;
+  font-size: large;
+}
+
+.card {
+  color: white;
+}
+
+.card h5 {
+  color: black;
 }
