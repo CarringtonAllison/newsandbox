@@ -36,14 +36,10 @@ const Recipe = ({
           {title}
           <i className="material-icons right">close</i>
         </span>
-        <p>
-          <h5>Yield:</h5>
-          {foodyield}{" "}
-        </p>
-        <p>
-          <h5>Calories:</h5>
-          {fixedCalories}
-        </p>
+        <h5>Yield:</h5>
+        <p>{foodyield} </p>
+        <h5>Calories:</h5>
+        <p>{fixedCalories}</p>
         <ul>
           <h5>Ingredients</h5>
           {ingredients.map((data) => (

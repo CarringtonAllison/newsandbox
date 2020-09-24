@@ -23,8 +23,20 @@ const App = () => {
     );
 
     const data = await response.json();
-    console.log(data);
-    setRecipes(data.hits);
+    const dataArr = data.hits;
+    let randomMeals = [];
+
+    //run a loop to find three random recipes from the ajax request
+    for (let i = 0; i < 3; i++) {
+      const meal = dataArr[Math.floor(Math.random() * dataArr.length)];
+      randomMeals.push(meal);
+    }
+    // need to have this condition to prevent errors on inital loading since there is no data yet.
+    if (dataArr.length < 1) {
+      return;
+    } else {
+      setRecipes(randomMeals);
+    }
   };
 
   //function for updating the search input box live
