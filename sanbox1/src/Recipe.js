@@ -27,7 +27,7 @@ const Recipe = ({
             targt="_blank"
             rel="noopener noreferrer"
           >
-            How To Prepare
+            Instructions
           </a>
         </p>
       </div>
