@@ -69,8 +69,13 @@ const App = () => {
                 value={search}
                 onChange={updateSearch}
               />
-              <label htmlFor="materialize-textarea">Search for Food</label>
-              <div className="col s4 offset-s4">
+              <label
+                className="col offset-s2 offset-l5"
+                htmlFor="materialize-textarea"
+              >
+                Search for Food
+              </label>
+              <div className="col offset-l5 offset-s3">
                 <button
                   id="submitButton"
                   className="btn waves-effect waves-light"
@@ -86,7 +91,7 @@ const App = () => {
       </div>
       <div className="row">
         {recipes.map((recipe) => (
-          <div className="col l3 m6 s12">
+          <div className="col l4 m6 s12">
             <Recipe
               key={recipe.recipe.image}
               title={recipe.recipe.label}

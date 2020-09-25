@@ -68,3 +68,7 @@ html {
 .card h5 {
   color: black;
 }
+
+.input-field.col label {
+  left: 0 !important;
+}
